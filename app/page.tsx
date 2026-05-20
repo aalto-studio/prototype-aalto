@@ -398,9 +398,18 @@ export default function AaltoSpecBuilderPrototype() {
                             <p className="mt-2 text-xs text-stone-500">{row.notes}</p>
                           </div>
                           <div className="grid gap-3 text-xs md:grid-cols-3">
-                            <div><div className="mb-1 font-semibold text-stone-500">Undercoat</div><span>{row.undercoat}</span> /></div>
-                            <div><div className="mb-1 font-semibold text-stone-500">First Coat</div><span>{row.firstCoat}</span> /></div>
-                            <div><div className="mb-1 font-semibold text-stone-500">Second Coat</div><span>{row.secondCoat}</span> /></div>
+                            <div>
+  <div className="mb-1 font-semibold text-stone-500">Undercoat</div>
+  <span>{row.undercoat}</span>
+</div>
+<div>
+  <div className="mb-1 font-semibold text-stone-500">First Coat</div>
+  <span>{row.firstCoat}</span>
+</div>
+<div>
+  <div className="mb-1 font-semibold text-stone-500">Second Coat</div>
+  <span>{row.secondCoat}</span>
+</div>
                           </div>
                           <div className="rounded-[1.75rem] bg-[#E7DED6] p-4">
                             <div className="mb-2 h-24 rounded-[0.9rem] border border-black/10 shadow-inner" style={{ backgroundColor: colour.hex }} />
