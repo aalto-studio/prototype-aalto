@@ -130,7 +130,7 @@ function runPrototypeTests() {
 
 runPrototypeTests();
 
-function findProduct(label) {
+function findProduct(label: string) {
   return productLibrary.find((product) => productName(product) === label) || productLibrary[0];
 }
 
