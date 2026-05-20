@@ -252,7 +252,7 @@ export default function AaltoSpecBuilderPrototype() {
     ]);
   };
 
-  const deleteRow = (index) => {
+  const deleteRow = (index: number) => {
     setRows((current) => current.filter((_, rowIndex) => rowIndex !== index));
   };
 
