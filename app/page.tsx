@@ -185,7 +185,13 @@ function ColourSwatch({ colourName, compact = false }) {
   );
 }
 
-function ProductRef({ label }) {
+function ColourSwatch({
+  colourName,
+  compact = false,
+}: {
+  colourName: string
+  compact?: boolean
+}) {
   const product = findProduct(label);
 
   return (
