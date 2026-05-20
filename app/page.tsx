@@ -155,7 +155,15 @@ function Textarea(props: React.TextareaHTMLAttributes<HTMLTextAreaElement>) {
   return <textarea {...props} className="min-h-[86px] w-full rounded-[0.9rem] border border-stone-200 bg-white/90 px-3 py-2 text-sm outline-none transition focus:border-[#7d1a2a] focus:ring-2 focus:ring-[#7d1a2a]/10" />;
 }
 
-function Select({ value, onChange, children }) {
+function Select({
+  value,
+  onChange,
+  children,
+}: {
+  value: string
+  onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void
+  children: React.ReactNode
+}) {
   return (
     <select value={value} onChange={onChange} className="w-full rounded-[0.9rem] border border-stone-200 bg-white/90 px-3 py-2 text-sm outline-none transition focus:border-[#7d1a2a] focus:ring-2 focus:ring-[#7d1a2a]/10">
       {children}
