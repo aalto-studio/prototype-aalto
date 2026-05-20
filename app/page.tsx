@@ -233,7 +233,7 @@ export default function AaltoSpecBuilderPrototype() {
     setProject((current) => ({ ...current, [key]: value }));
   };
 
-  const updateRow = (index, key, value) => {
+  const updateRow = (index: number, key: string, value: string) => {
     setRows((current) => current.map((row, rowIndex) => (rowIndex === index ? { ...row, [key]: value } : row)));
   };
 
