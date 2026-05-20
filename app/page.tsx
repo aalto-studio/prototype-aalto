@@ -171,20 +171,6 @@ function Select({
   );
 }
 
-function ColourSwatch({ colourName, compact = false }) {
-  const colour = findColour(colourName);
-
-  return (
-    <div className={`flex items-center gap-3 ${compact ? "" : "rounded-[1rem] border border-stone-200 bg-white p-3 shadow-sm"}`}>
-      <div className="h-10 w-10 shrink-0 rounded-full border border-black/10 shadow-inner" style={{ backgroundColor: colour.hex }} />
-      <div className="min-w-0">
-        <div className="truncate text-sm font-semibold text-stone-950">{colour.name}</div>
-        <div className="text-[11px] text-stone-500">LRV {colour.lrv} · {colour.code}</div>
-      </div>
-    </div>
-  );
-}
-
 function ColourSwatch({
   colourName,
   compact = false,
