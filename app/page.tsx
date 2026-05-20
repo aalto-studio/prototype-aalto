@@ -229,7 +229,7 @@ export default function AaltoSpecBuilderPrototype() {
     return productFilter === "All" ? productLibrary : productLibrary.filter((product) => product.category === productFilter);
   }, [productFilter]);
 
-  const updateProject = (key, value) => {
+  const updateProject = (key: string, value: string) => {
     setProject((current) => ({ ...current, [key]: value }));
   };
 
