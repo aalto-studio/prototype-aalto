@@ -147,7 +147,7 @@ function Field({ label, children }: { label: string; children: React.ReactNode }
   );
 }
 
-function Input(props) {
+function Input(props: React.InputHTMLAttributes<HTMLInputElement>) {
   return <input {...props} className="w-full rounded-[0.9rem] border border-stone-200 bg-white/90 px-3 py-2 text-sm outline-none transition focus:border-[#7d1a2a] focus:ring-2 focus:ring-[#7d1a2a]/10" />;
 }
 
