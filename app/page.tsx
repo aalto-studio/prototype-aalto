@@ -218,7 +218,7 @@ export default function AaltoSpecBuilderPrototype() {
   }, [colourSearch]);
 
   const groupedRows = useMemo(() => {
-    return rows.reduce((acc, row) => {
+    return rows.reduce((acc: Record<string, typeof rows>, row) => {
       if (!acc[row.zone]) acc[row.zone] = [];
       acc[row.zone].push(row);
       return acc;
