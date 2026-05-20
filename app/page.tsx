@@ -134,7 +134,7 @@ function findProduct(label: string) {
   return productLibrary.find((product) => productName(product) === label) || productLibrary[0];
 }
 
-function findColour(name) {
+function findColour(name: string) {
   return masterPalette.find((colour) => colour.name === name) || masterPalette[0];
 }
 
