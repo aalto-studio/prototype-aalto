@@ -138,7 +138,7 @@ function findColour(name: string) {
   return masterPalette.find((colour) => colour.name === name) || masterPalette[0];
 }
 
-function Field({ label, children }) {
+function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <label className="block space-y-1">
       <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-stone-500">{label}</span>
