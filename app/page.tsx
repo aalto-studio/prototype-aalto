@@ -178,7 +178,7 @@ function ColourSwatch({
   colourName: string
   compact?: boolean
 }) {
-  const product = findProduct(label);
+  const product = findProduct(colourName);
 
   return (
     <div className="space-y-1">
