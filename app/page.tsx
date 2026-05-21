@@ -178,18 +178,23 @@ function ColourSwatch({
   colourName: string
   compact?: boolean
 }) {
-  const product = findProduct(colourName);
+  const colour = findColour(colourName);
 
   return (
     <div className="space-y-1">
-      <a href={product.url} target="_blank" rel="noreferrer" className="font-medium text-stone-950 underline decoration-[#7d1a2a]/30 underline-offset-2 hover:text-[#7d1a2a]">
-        {productName(product)}
-      </a>
-      <div className="flex gap-2 text-[10px] uppercase tracking-wide text-stone-500">
-        <span>{product.category}</span>
-        <span>·</span>
-        <span>{product.finish}</span>
-      </div>
+      <div
+        className={compact ? "h-8 w-8 rounded-[0.6rem]" : "h-16 w-full rounded-[0.9rem]"}
+        style={{ backgroundColor: colour.hex }}
+      />
+      {!compact && (
+        <>
+          <div className="font-medium text-stone-950">{colour.name}</div>
+          <div className="flex gap-2 text-[10px] uppercase tracking-wide text-stone-500">
+            <span>{colour.code}</span>
+            <span>LRV {colour.lrv}</span>
+          </div>
+        </>
+      )}
     </div>
   );
 }
